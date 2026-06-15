@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance & Performance Analyzer - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"/>
+                    </svg>
+                </div>
+                <span class="sidebar-brand">SmartAttendance</span>
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+            </div>
+            <nav class="sidebar-nav" id="sidebarNav">
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info" id="sidebarUserInfo">
+                    <div class="user-avatar" id="userAvatar">A</div>
+                    <div class="user-details">
+                        <span class="user-name" id="sidebarUserName">Admin</span>
+                        <span class="user-role" id="sidebarUserRole">Administrator</span>
+                    </div>
+                </div>
+                <div class="sidebar-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                        <span class="theme-icon" id="themeIcon">🌙</span>
+                    </button>
+                    <button class="btn btn-sm btn-outline" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content" id="mainContent">
+            <header class="topbar">
+                <h2 class="page-title" id="pageTitle">Dashboard</h2>
+                <div class="topbar-actions">
+                    <span class="badge badge-teal" id="currentDate"></span>
+                </div>
+            </header>
+            <div class="dashboard-panels" id="dashboardPanels">
+            </div>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Modal</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
